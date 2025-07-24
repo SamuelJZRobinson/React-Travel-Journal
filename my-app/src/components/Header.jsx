@@ -3,7 +3,7 @@ export default function Header() {
     <header>
       <div id="logo-container">
         <a href="#">
-          <img src="#" />
+          <img className="logo" src="./src/assets/travel-king-logo.png" />
           <p className="title">Travel King</p>
         </a>
       </div>
