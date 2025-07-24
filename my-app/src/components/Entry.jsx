@@ -1,27 +1,33 @@
-export default function Entry() {
+export default function Entry({
+  img,
+  country,
+  location,
+  mapURL,
+  startDate,
+  endDate,
+  description,
+}) {
   return (
     <>
-      <div class="entry">
+      <div className="entry">
         <div className="left">
-          <img src="./src/assets/paris.jpg" />
+          <img src={img.src} alt={img.alt} />
         </div>
         <div className="right">
           <div className="address">
             <img className="icon" src="./src/assets/location-pin.png" />
-            <p>PARIS</p>
+            <p className="country">{country}</p>
             <p>
-              <a href="#">
+              <a href={mapURL}>
                 <u>View on Google Maps</u>
               </a>
             </p>
           </div>
-          <h1>Eiffel Tower</h1>
-          <p class="date">24 Jan 2025 - 8 Aug 2025</p>
-          <p class="description">
-            The Eiffel Tower is a wrought-iron lattice tower in Paris, France.
-            Built in 1889, it stands 330 meters tall and is an iconic symbol of
-            French architecture and engineering.
+          <h1>{location}</h1>
+          <p className="date">
+            {startDate} - {endDate}
           </p>
+          <p className="description">{description}</p>
         </div>
       </div>
     </>
