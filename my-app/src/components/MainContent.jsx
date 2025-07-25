@@ -6,15 +6,7 @@ export default function MainContent() {
     <main>
       <div className="entry-container">
         {tourData.map((item) => (
-          <Entry
-            img={item.img}
-            country={item.country}
-            location={item.location}
-            mapURL={item.mapURL}
-            startDate={item.startDate}
-            endDate={item.endDate}
-            description={item.description}
-          />
+          <Entry key={item.id} item={item} />
         ))}
       </div>
     </main>
