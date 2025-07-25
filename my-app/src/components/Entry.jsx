@@ -3,23 +3,23 @@ export default function Entry(props) {
     <>
       <div className="entry">
         <div className="left">
-          <img src={props.item.img.src} alt={props.item.img.alt} />
+          <img src={props.img.src} alt={props.img.alt} />
         </div>
         <div className="right">
           <div className="address">
             <img className="icon" src="./src/assets/location-pin.png" />
-            <p className="country">{props.item.country}</p>
+            <p className="country">{props.country}</p>
             <p>
-              <a href={props.item.mapURL}>
+              <a href={props.mapURL}>
                 <u>View on Google Maps</u>
               </a>
             </p>
           </div>
-          <h1>{props.item.location}</h1>
+          <h1>{props.location}</h1>
           <p className="date">
-            {props.item.startDate} - {props.item.endDate}
+            {props.startDate} - {props.endDate}
           </p>
-          <p className="description">{props.item.description}</p>
+          <p className="description">{props.description}</p>
         </div>
       </div>
     </>

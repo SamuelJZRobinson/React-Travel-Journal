@@ -6,7 +6,7 @@ export default function MainContent() {
     <main>
       <div className="entry-container">
         {tourData.map((item) => (
-          <Entry key={item.id} item={item} />
+          <Entry key={item.id} {...item} />
         ))}
       </div>
     </main>
